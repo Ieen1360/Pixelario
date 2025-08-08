@@ -1,15 +1,24 @@
-// CONFIGURAÇÕES FIREBASE
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyD56r1Hqn6PoN4uFJJIzICIJmWUzpimsbM",
   authDomain: "pixelario-45257.firebaseapp.com",
   projectId: "pixelario-45257",
-  storageBucket: "pixelario-45257.appspot.com",
+  storageBucket: "pixelario-45257.firebasestorage.app",
   messagingSenderId: "332887964275",
-  appId: "1:332887964275:web:SEU_APP_ID"
+  appId: "1:332887964275:web:ff4c0f8a99f4a8aea78806",
+  measurementId: "G-YZF0CZM1T4"
 };
 
-firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 // Elementos DOM
 const canvas = document.getElementById("pixel-canvas");
